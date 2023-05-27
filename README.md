@@ -12,3 +12,6 @@ by using HTML5 , CSS3 , JavaScript , and Flask
 
 3. Login  Page : 
         ![Screenshot (6)](https://github.com/MohamedAnsar37/Login-RegisterPage/assets/133519687/aea68a24-d86b-4aee-b074-953533b60700)
+
+4. Dashboard Page: 
+        ![Screenshot (7)](https://github.com/MohamedAnsar37/Login-RegisterPage/assets/133519687/e0fd38cf-71f5-4b5c-be6d-4668267c5a19)
