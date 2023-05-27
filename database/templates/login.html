@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login Page</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+    * {
+      font-family: 'Orbitron', sans-serif;
+    }
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-color: #f2f2f2;
+      font-family: Arial, sans-serif;
+    }
+    
+    .container {
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      border-radius: 8px;
+      padding: 30px;
+      width: 300px;
+    }
+    
+    h1 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 30px;
+    }
+    
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #007bff;
+      border: none;
+      color: #fff;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    
+    button:hover {
+      background-color: green;
+    }
+    body {
+      background-image: url('back.png');
+      background-repeat:no-repeat;
+      background-size:cover;
+    }
+  </style>
+</head>
+<body style="background-image: url('/static/images/back.jpg')">
+  <div class="container">
+    <h1>Login</h1>
+    <form id="loginForm">
+      <input type="text" id="username" placeholder="Enter Your Username" required>
+      <input type="password" id="password" placeholder="Enter Your Password" required>
+      <button type="submit" onclick="redirectToDashboard()">Login</button>
+    </form>
+  </div>
+  <script>
+    document.getElementById("loginForm").addEventListener("submit", function(event) {
+      event.preventDefault(); // Prevent the default form submission
+
+      // Get the entered username and password
+      var username = document.getElementById("username").value;
+      var password = document.getElementById("password").value;
+
+      // Perform your login logic here
+      // For example, you can check the credentials and redirect if valid
+      
+      localStorage.setItem("username", username);
+      localStorage.setItem("password", password);
+      
+      if (username === "yourUsername" && password === "yourPassword") {
+        // Redirect to dashboard.html
+        window.location.href = "/dashboard";
+      }
+    });
+
+    // Retrieve stored values and set them in input fields
+    var storedUsername = localStorage.getItem("username");
+    var storedPassword = localStorage.getItem("password");
+
+    if (storedUsername && storedPassword) {
+      document.getElementById("username").value = storedUsername;
+      document.getElementById("password").value = storedPassword;
+    }
+    function redirectToDashboard() {
+        window.location.href = "/dashboard";
+      }
+  </script>
+</body>
+</html>

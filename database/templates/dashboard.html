@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Landing Dashboard</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+    * {
+      font-family: 'Orbitron', sans-serif;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f2f2f2;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    
+    .dashboard {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    
+    .card {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+      padding: 20px;
+      text-align: center;
+    }
+    
+    .card h2 {
+      color: #333;
+      margin-top: 0;
+    }
+    
+    .card p {
+      color: #666;
+      margin-bottom: 0;
+    }
+    
+    @media screen and (max-width: 768px) {
+      .card {
+        padding: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 style="text-align:center">Welcome to the Dashboard</h1>
+    <div class="dashboard">
+      <div class="card">
+        <h2>Users</h2>
+        <p>Manage users</p>
+      </div>
+      <div class="card">
+        <h2>Products</h2>
+        <p>Manage products</p>
+      </div>
+      <div class="card">
+        <h2>Orders</h2>
+        <p>Manage orders</p>
+      </div>
+      <div class="card">
+        <h2>Analytics</h2>
+        <p>View analytics</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

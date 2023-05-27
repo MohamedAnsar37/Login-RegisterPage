@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Personal Information Form</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/register.css') }}">
+</head>
+<link rel="stylesheet" href="register.css">
+<body style="background-image: url('/static/images/back.jpg')">
+  <h1>Personal Information</h1>
+  <form>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required><br><br>
+
+    <label for="gender">Gender:</label>
+    <select id="gender" name="gender" required>
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+      <option value="other">Other</option>
+    </select><br><br>
+
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age" required><br><br>
+
+    <label for="email">Gmail Address:</label>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" name="phone" required><br><br>
+
+    <input type="submit" value="Submit" onclick="killo()">
+  </form>
+  <script>
+    function killo() {
+      alert("You are Registered Successfully!!");
+    }
+  </script>
+</body>
+</html>
